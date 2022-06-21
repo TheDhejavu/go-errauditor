@@ -1,19 +1,19 @@
-package examples
+package double
 
 import (
 	"errors"
 	"fmt"
 
-	"github.com/thedhejavu/errauditor/pkg/apperrors"
+	"github.com/thedhejavu/errauditor/examples/project/pkg/apperrors"
 )
 
 type usecase struct{}
 
-func GetAddressByUser() error {
+func GetAddressByUserr() error {
 	address := ""
 	err := errors.New("doe")
 	if address == "" {
-		return fmt.Errorf("unable to update appraisal by user: %w", err)
+		return fmt.Errorf("unable to get by user: %w", err)
 	}
 	return apperrors.ErrInternalServerError("done")
 }
