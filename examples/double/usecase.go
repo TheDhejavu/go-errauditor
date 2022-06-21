@@ -1,0 +1,32 @@
+package double
+
+import (
+	"errors"
+	"fmt"
+
+	"github.com/thedhejavu/errauditor/pkg/apperrors"
+)
+
+type usecase struct{}
+
+func GetAddressByUserr() error {
+	address := ""
+	err := errors.New("doe")
+	if address == "" {
+		return fmt.Errorf("unable to get by user: %w", err)
+	}
+	return apperrors.ErrInternalServerError("done")
+}
+
+func GetDrilldown() (error, int) {
+	err := errors.New("doe")
+	return fmt.Errorf("unable to update appraisal by user: %w", err), -1
+}
+
+func GetDrilldowns() (error, int) {
+	return apperrors.ErrInternalServerError("done"), -1
+}
+
+func (u usecase) GetDrixxlldowns() (error, int) {
+	return apperrors.ErrInternalServerError("done"), -1
+}

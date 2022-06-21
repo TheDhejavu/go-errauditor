@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/thedhejavu/go-error-analyzer/pkg/apperrors"
+	"github.com/thedhejavu/errauditor/pkg/apperrors"
 )
 
 type usecase struct{}
@@ -19,9 +19,14 @@ func GetAddressByUser() error {
 }
 
 func GetDrilldown() (error, int) {
-	return apperrors.ErrInternalServerError("i am here "), -1
+	err := errors.New("doe")
+	return fmt.Errorf("unable to update appraisal by user: %w", err), -1
 }
 
 func GetDrilldowns() (error, int) {
+	return apperrors.ErrInternalServerError("done"), -1
+}
+
+func (u usecase) GetDrixxlldowns() (error, int) {
 	return apperrors.ErrInternalServerError("done"), -1
 }
