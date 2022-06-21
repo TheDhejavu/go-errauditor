@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/thedhejavu/errauditor/pkg/apperrors"
+	"github.com/thedhejavu/errauditor/examples/project/pkg/apperrors"
 )
 
 func TestComparingErrors(t *testing.T) {
